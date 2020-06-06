@@ -19,22 +19,27 @@ namespace inventario
         [Key]
         public int IdPer { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Nombre { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Apellido1 { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Apellido2 { get; set; }
 
-        [Required]
-        [StringLength(40)]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"M|F", ErrorMessage = "Formato Incorrecto: Respuestas M/F (Masculino/Femenino)")]
+        [StringLength(1)]
         public string Sexo { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int IdDir { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

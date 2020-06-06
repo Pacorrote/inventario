@@ -19,12 +19,15 @@ namespace inventario
         [Key]
         public int IdCli { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int IdPersona { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"M|F", ErrorMessage = "Respuestas posibles: M/F (Fisica/Moral)")]
         [StringLength(1)]
         public string Tipo { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(50)]
         public string Empresa { get; set; }
 

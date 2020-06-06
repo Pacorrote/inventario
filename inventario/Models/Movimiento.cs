@@ -18,7 +18,7 @@ namespace inventario
         [Key]
         public int IdMov { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Descripcion { get; set; }
 

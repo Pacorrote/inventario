@@ -19,7 +19,7 @@ namespace inventario
         [Key]
         public int IdProv { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Nombre { get; set; }
 

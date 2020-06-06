@@ -18,30 +18,40 @@ namespace inventario
         [Key]
         public int IdDir { get; set; }
 
-        [Required]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Pais { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Estado { get; set; }
 
-        [Required]
+
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Ciudad { get; set; }
 
-        [Required]
+
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][0-9A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Colonia { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Calle { get; set; }
 
+        [RegularExpression(@"[0-9]+", ErrorMessage = "Formato Inválido")]
         public int NumExt { get; set; }
 
+        [RegularExpression(@"[0-9]+", ErrorMessage = "Formato Inválido")]
         public int? NumInt { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"[0-9]{5}", ErrorMessage = "Formato Inválido")]
         public int CodePostal { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

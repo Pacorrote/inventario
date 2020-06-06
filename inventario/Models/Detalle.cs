@@ -12,13 +12,20 @@ namespace inventario
         [Key]
         public int IdDet { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int IdCab { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int IdPro { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"[0-9]+", ErrorMessage = "Formato Inválido")]
+        [Range(1,1000, ErrorMessage = "Este campo {0} requiere un número entre {1} y {2}"]
         [Column(TypeName = "numeric")]
         public decimal Cantidad { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"[0-9]+", ErrorMessage = "Formato Inválido")]
         [Column(TypeName = "numeric")]
         public decimal Total { get; set; }
 

@@ -18,9 +18,12 @@ namespace inventario
         [Key]
         public int IdDep { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
+        [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]
         public string Nombre { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Descripcion { get; set; }
 

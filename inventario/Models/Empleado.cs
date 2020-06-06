@@ -19,8 +19,10 @@ namespace inventario
         [Key]
         public int IdEmp { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         public int IdPersona { get; set; }
 
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [Column(TypeName = "numeric")]
         public decimal Sueldo { get; set; }
 

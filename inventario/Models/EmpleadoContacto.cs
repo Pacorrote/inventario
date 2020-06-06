@@ -19,7 +19,7 @@ namespace inventario
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int IdCon { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [StringLength(40)]
         public string Descripcion { get; set; }
 

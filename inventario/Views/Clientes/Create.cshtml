@@ -46,11 +46,23 @@
         </div>
     </div>
 }
-
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
-
+<script>
+    var txtTipo = document.getElementById("Tipo");
+    function init() {
+       txtTipo.addEventListener("keyup", function () {
+           if (txtTipo.value = "F") {
+               document.getElementById("Empresa").value = "";
+               document.getElementById("Empresa").disabled = true;
+           } else {
+               document.getElementById("Empresa").disabled = false;
+           }
+        }, false);
+    }
+    window.addEventListener("load", init, false);
+</script>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
