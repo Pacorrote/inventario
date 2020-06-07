@@ -22,3 +22,17 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.thead-dark{
+    background-color: #2f333e;
+    color: #cfcfcf;
+}
+
+.btn-green{
+    background-color: greenyellow;
+}
+
+.alert-info{
+    padding: 10px;
+    margin-bottom: 12px;
+}
