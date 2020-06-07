@@ -10,24 +10,29 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Nombre)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model)
+{
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.Nombre)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProv }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProv }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProv })
+            @Html.ActionLink("Edit", "Edit", new { id = item.IdProv }) |
+            @Html.ActionLink("Details", "Details", new { id = item.IdProv }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.IdProv })
         </td>
     </tr>
 }
+    </tbody>
+        
 
 </table>
