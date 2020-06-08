@@ -24,20 +24,33 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contactos", "Index", "Contactos")</li>
+                    <li>
+                        <a a class="nav-link dropdown-toggle"
+                           href="#" id="navbarDropdown"
+                           role="button"
+                           data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            Contactos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            @Html.ActionLink("Formas de contacto", "Index", "Contactos")
+                            @Html.ActionLink("Cliente Contactos", "Index", "ClienteContacto")
+                            @Html.ActionLink("Contacto Proveedor", "Index", "Contacto_Proveedor")
+                            @Html.ActionLink("Empleados contactos", "Index", "EmpleadoContactoes")
+                        </div>
+                    </li>
                     <li>@Html.ActionLink("Cabeceras", "Index", "Cabeceras")</li>
-                    <li>@Html.ActionLink("Cliente Contactos", "Index", "ClienteContacto")</li>
                     <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
-                    <li>@Html.ActionLink("Contacto Proveedor", "Index", "Contacto_Proveedor")</li>
                     <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
                     <li>@Html.ActionLink("Detalles", "Index", "Detalles")</li>
                     <li>@Html.ActionLink("Dirección", "Index", "Dirección")</li>
-                    <li>@Html.ActionLink("Empleados contactos", "Index", "EmpleadoContactoes")</li>
                     <li>@Html.ActionLink("Movimientos", "Index", "Movimientos")</li>
-                    <li>@Html.ActionLink("Personas", "Index", "Productos")</li>
+                    <li>@Html.ActionLink("Productos", "Index", "Productos")</li>
                     <li>@Html.ActionLink("Proveedor", "Index", "Proveedor")</li>
+                    <li>@Html.ActionLink("Personas", "Index", "Personas")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                @*@Html.Partial("_LoginPartial")*@
             </div>
         </div>
     </div>
