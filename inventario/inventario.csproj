@@ -369,6 +369,7 @@
     <Content Include="Views\Movimientos\Details.cshtml" />
     <Content Include="Views\Movimientos\Edit.cshtml" />
     <Content Include="Views\Movimientos\Index.cshtml" />
+    <Content Include="Views\Shared\_AppLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
