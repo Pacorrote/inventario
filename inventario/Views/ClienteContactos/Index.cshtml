@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Clientes por contacto</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p class="btn btn-green">
+    @Html.ActionLink("Crear", "Create")
 </p>
 <table class="table">
     <thead class="thead-dark">
@@ -24,7 +24,8 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>@foreach (var item in Model)
+    <tbody>
+        @foreach (var item in Model)
         {
             <tr>
                 <td>
