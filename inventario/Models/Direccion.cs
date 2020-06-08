@@ -28,7 +28,6 @@ namespace inventario
         [StringLength(40)]
         public string Estado { get; set; }
 
-
         [Required(ErrorMessage = "Este campo {0} es obligatorio")]
         [RegularExpression(@"^[A-ZÁÉÍÓÚ][A-Za-záéíóú\s]+", ErrorMessage = "Formato Inválido")]
         [StringLength(40)]

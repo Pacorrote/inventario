@@ -39,7 +39,7 @@ namespace inventario.Controllers
         // GET: ClienteContactos/Create
         public ActionResult Create()
         {
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo");
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli");
             ViewBag.IdCon = new SelectList(db.Contacto, "IdCon", "Descripcion");
             return View();
         }
@@ -58,7 +58,7 @@ namespace inventario.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", clienteContacto.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", clienteContacto.IdCli);
             ViewBag.IdCon = new SelectList(db.Contacto, "IdCon", "Descripcion", clienteContacto.IdCon);
             return View(clienteContacto);
         }
@@ -75,7 +75,7 @@ namespace inventario.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", clienteContacto.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", clienteContacto.IdCli);
             ViewBag.IdCon = new SelectList(db.Contacto, "IdCon", "Descripcion", clienteContacto.IdCon);
             return View(clienteContacto);
         }
@@ -93,7 +93,7 @@ namespace inventario.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", clienteContacto.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", clienteContacto.IdCli);
             ViewBag.IdCon = new SelectList(db.Contacto, "IdCon", "Descripcion", clienteContacto.IdCon);
             return View(clienteContacto);
         }

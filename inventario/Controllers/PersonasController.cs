@@ -39,7 +39,7 @@ namespace inventario.Controllers
         // GET: Personas/Create
         public ActionResult Create()
         {
-            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Pais");
+            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Calle");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace inventario.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Pais", persona.IdDir);
+            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Calle", persona.IdDir);
             return View(persona);
         }
 
@@ -73,7 +73,7 @@ namespace inventario.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Pais", persona.IdDir);
+            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Calle", persona.IdDir);
             return View(persona);
         }
 
@@ -90,7 +90,7 @@ namespace inventario.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Pais", persona.IdDir);
+            ViewBag.IdDir = new SelectList(db.Direccion, "IdDir", "Calle", persona.IdDir);
             return View(persona);
         }
 

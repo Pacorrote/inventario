@@ -25,7 +25,6 @@ namespace inventario
         public decimal Cantidad { get; set; }
 
         [Required(ErrorMessage = "Este campo {0} es obligatorio")]
-        [RegularExpression(@"[0-9]+", ErrorMessage = "Formato Inválido")]
         [Column(TypeName = "numeric")]
         public decimal Total { get; set; }
 

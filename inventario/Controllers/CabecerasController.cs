@@ -39,7 +39,7 @@ namespace inventario.Controllers
         // GET: Cabeceras/Create
         public ActionResult Create()
         {
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo");
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli");
             ViewBag.IdDep = new SelectList(db.Departamento, "IdDep", "Nombre");
             ViewBag.IdEmp = new SelectList(db.Empleado, "IdEmp", "IdEmp");
             ViewBag.IdMov = new SelectList(db.Movimiento, "IdMov", "Descripcion");
@@ -60,7 +60,7 @@ namespace inventario.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", cabecera.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", cabecera.IdCli);
             ViewBag.IdDep = new SelectList(db.Departamento, "IdDep", "Nombre", cabecera.IdDep);
             ViewBag.IdEmp = new SelectList(db.Empleado, "IdEmp", "IdEmp", cabecera.IdEmp);
             ViewBag.IdMov = new SelectList(db.Movimiento, "IdMov", "Descripcion", cabecera.IdMov);
@@ -79,7 +79,7 @@ namespace inventario.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", cabecera.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", cabecera.IdCli);
             ViewBag.IdDep = new SelectList(db.Departamento, "IdDep", "Nombre", cabecera.IdDep);
             ViewBag.IdEmp = new SelectList(db.Empleado, "IdEmp", "IdEmp", cabecera.IdEmp);
             ViewBag.IdMov = new SelectList(db.Movimiento, "IdMov", "Descripcion", cabecera.IdMov);
@@ -99,7 +99,7 @@ namespace inventario.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "Tipo", cabecera.IdCli);
+            ViewBag.IdCli = new SelectList(db.Cliente, "IdCli", "IdCli", cabecera.IdCli);
             ViewBag.IdDep = new SelectList(db.Departamento, "IdDep", "Nombre", cabecera.IdDep);
             ViewBag.IdEmp = new SelectList(db.Empleado, "IdEmp", "IdEmp", cabecera.IdEmp);
             ViewBag.IdMov = new SelectList(db.Movimiento, "IdMov", "Descripcion", cabecera.IdMov);

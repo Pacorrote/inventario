@@ -124,6 +124,12 @@ namespace inventario.Controllers
             return RedirectToAction("Index");
         }
 
+        public JsonResult Precio(int id)
+        {
+            Producto producto = db.Producto.Find(id);
+            return Json(new { producto.CostoUnitario, producto.Cantidad }, JsonRequestBehavior.AllowGet);
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
