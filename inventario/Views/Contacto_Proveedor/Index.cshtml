@@ -13,10 +13,10 @@
     <thead class="thead-dark">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Contacto.Descripcion)
+                @Html.DisplayNameFor(model => model.Proveedor.Nombre)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Proveedor.Nombre)
+                @Html.DisplayNameFor(model => model.Contacto.Descripcion)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
@@ -27,22 +27,22 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Contacto.Descripcion)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Proveedor.Nombre)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descripcion)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proveedor.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contacto.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Detalles", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Eliminar", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
         }
     </tbody>
 

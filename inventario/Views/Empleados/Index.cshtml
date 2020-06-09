@@ -13,7 +13,13 @@
     <thead class="thead-dark">
         <tr>
             <th>
+                ID de Empleado
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Persona.Nombre)
+            </th>
+            <th>
+                Apellidos
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Sueldo)
@@ -24,19 +30,26 @@
     <tbody>
 @foreach (var item in Model)
 {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Persona.Nombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Sueldo)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id = item.IdEmp }) |
-            @Html.ActionLink("Detalles", "Details", new { id = item.IdEmp }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEmp })
-        </td>
-    </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdEmp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persona.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Persona.Apellido1) 
+                @Html.DisplayFor(modelItem => item.Persona.Apellido2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sueldo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdEmp }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdEmp }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdEmp })
+            </td>
+        </tr>
 }
     </tbody>
         

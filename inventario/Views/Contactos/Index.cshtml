@@ -13,6 +13,9 @@
     <thead class="thead-dark">
         <tr>
             <th>
+                ID
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
             </th>
             <th></th>
@@ -21,16 +24,19 @@
     <tbody>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descripcion)
-                </td>
-                <td>
-                    @Html.ActionLink("Editar", "Edit", new { id = item.IdCon }) |
-                    @Html.ActionLink("Detalles", "Details", new { id = item.IdCon }) |
-                    @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCon })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdCon }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.IdCon }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCon })
+            </td>
+        </tr>
         }
     </tbody>
 </table>
