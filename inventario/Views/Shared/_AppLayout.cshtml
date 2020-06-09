@@ -24,6 +24,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
+                    <li>@Html.ActionLink("Personas", "Index", "Personas")</li>
+                    <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
+                    <li>@Html.ActionLink("Empleado", "Index", "Empleado")</li>
                     <li>
                         <a a class="nav-link dropdown-toggle"
                            href="#" id="navbarDropdown"
@@ -40,13 +43,15 @@
                             @Html.ActionLink("Empleados contactos", "Index", "EmpleadoContactoes")
                         </div>
                     </li>
-                    <li>@Html.ActionLink("Cabeceras", "Index", "Cabeceras")</li>
-                    <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
                     <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
                     <li>@Html.ActionLink("Movimientos", "Index", "Movimientos")</li>
                     <li>@Html.ActionLink("Productos", "Index", "Productos")</li>
-                    <li>@Html.ActionLink("Personas", "Index", "Personas")</li>
-                    <li>@Html.ActionLink("Empleado", "Index", "Empleado")</li>
+                    <li>@Html.ActionLink("Mostrador", "Index", "Cabeceras")</li>
+
+
+
+
+
                 </ul>
                 @*@Html.Partial("_LoginPartial")*@
             </div>
