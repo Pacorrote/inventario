@@ -39,7 +39,7 @@ namespace inventario.Controllers
         // GET: Detalles/Create
         public ActionResult Create()
         {
-            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "Fecha");
+            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "IdCab");
             ViewBag.IdPro = new SelectList(db.Producto, "IdPro", "Nombre");
             return View();
         }
@@ -58,7 +58,7 @@ namespace inventario.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "Fecha", detalle.IdCab);
+            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "IdCab", detalle.IdCab);
             ViewBag.IdPro = new SelectList(db.Producto, "IdPro", "Nombre", detalle.IdPro);
             return View(detalle);
         }
@@ -75,7 +75,7 @@ namespace inventario.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "Fecha", detalle.IdCab);
+            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "IdCab" , detalle.IdCab);
             ViewBag.IdPro = new SelectList(db.Producto, "IdPro", "Nombre", detalle.IdPro);
             return View(detalle);
         }
@@ -93,7 +93,7 @@ namespace inventario.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "Fecha", detalle.IdCab);
+            ViewBag.IdCab = new SelectList(db.Cabecera, "IdCab", "IdCab" , detalle.IdCab);
             ViewBag.IdPro = new SelectList(db.Producto, "IdPro", "Nombre", detalle.IdPro);
             return View(detalle);
         }
@@ -121,7 +121,8 @@ namespace inventario.Controllers
             Detalle detalle = db.Detalle.Find(id);
             db.Detalle.Remove(detalle);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            //return RedirectToAction("Index");
+            return null;
         }
 
         public JsonResult Precio(int id)
