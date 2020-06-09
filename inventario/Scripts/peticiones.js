@@ -54,5 +54,5 @@ $("#Cantidad").keyup(function () {
 });
 
 
-$("#Total").prop('disabled', true);
+/*$("#Total").prop('disabled', true);*/
 buscarPrecio();
